@@ -1,0 +1,12 @@
+.DS_Store
+**/node_modules/
+**/build/
+**/.env
+**/.env.*
+!**/.env.example
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+Dollzie-website-master/

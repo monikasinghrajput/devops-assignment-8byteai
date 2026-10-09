@@ -1,0 +1,81 @@
+/* Variables */
+:root{
+  --ff-quick: "Quick", Arial, sans-serif;
+  --ink: #2C3E50;
+  --accent: #FFB2A2;
+}
+
+/* Global Reset */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* Force font everywhere */
+html, body {
+  font-family: 'Quick', Arial, sans-serif !important;
+  font-weight: 400;
+  background-color: #ffffff;
+  color: var(--ink);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bold elements */
+b, strong, h1, h2, h3, h4, h5, h6 { 
+  font-family: 'Quick', Arial, sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Test classes */
+.test-font {
+  font-family: 'Quick', Arial, sans-serif !important;
+  font-size: 30px;
+  font-weight: 700;
+  color: red;
+  margin: 20px 0;
+}
+
+.test-regular {
+  font-family: 'Quick', Arial, sans-serif !important;
+  font-size: 20px;
+  font-weight: 400;
+  color: blue;
+  margin: 20px 0;
+}
+
+/* Specific classes jo bold hona chahiye */
+.slide-title,
+.collabs-title,
+.new-arrivals-title,
+.pdp-title,
+.pdp-related-title,
+.header .logo-text h2 {
+  font-weight: 700 !important;
+}
+
+/* Rest of CSS */
+button { font-family: inherit; border: none; background: none; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+img { max-width: 100%; height: auto; display: block; }
+input, select, textarea { font-family: inherit; font-size: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FF9A84; }
+
+/* Selection + focus */
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Animations */
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }

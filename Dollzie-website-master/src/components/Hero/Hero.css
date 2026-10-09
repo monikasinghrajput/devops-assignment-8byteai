@@ -1,0 +1,68 @@
+/* Container */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 0;
+  margin-top: 8px; /* small space from header */
+}
+
+/* Track holds all slides side-by-side */
+.hero-track {
+  display: flex;
+  width: 100%;
+  transition: transform 600ms ease-in-out;
+}
+
+/* Each slide */
+.hero-slide {
+  position: relative;
+  min-width: 100%;
+  line-height: 0; /* prevents image gap */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Transparent hotspot (percent values come from slide.hotspot) */
+.shop-now-hotspot {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.shop-now-hotspot:focus-visible {
+  outline: 3px dashed #000;
+  outline-offset: 3px;
+}
+
+/* 🔥 Dots BELOW banner (not overlay) */
+.hero-dots {
+  position: relative;        /* dots flow after banner */
+  margin-top: 14px;          /* space below banner */
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  gap: 12px;
+}
+
+/* Dot style */
+.dot {
+  width: 12px;               /* bigger dot */
+  height: 12px;
+  border-radius: 50%;
+  border: 0;
+  background: #b9b9b9;
+  cursor: pointer;
+}
+.dot.active { background: #333; }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .hero-dots { margin-top: 10px; gap: 10px; }
+  .dot { width: 10px; height: 10px; }
+}
